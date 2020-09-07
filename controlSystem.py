@@ -6,8 +6,61 @@ Created on Tue Aug 18 17:24:42 2020
 """
 import subMovement
 import os
+import tkinter as tk
 
 #main is where GUI will be developed
+def GUI():
+    top = tk.Tk()
+    camera = subMovement.Camera(10)
+    title = tk.Label(text = "Submarine Control System")
+    stream = tk.Label(
+        text="Video Stream",
+        fg="white",
+        bg="black",
+        width=100,
+        height=30
+    )
+    record = tk.Button(
+        text="Record Video",
+        width=22,
+        height=3,
+        bg="red",
+        fg="white",
+        command = camera.record,
+    )
+    picture = tk.Button(
+        text="Take Picture",
+        width=22,
+        height=3,
+        bg="red",
+        fg="white",
+        command = camera.takePhoto,
+    )
+    battery = tk.Button(
+        text="Battery Display",
+        width=22,
+        height=3,
+        bg="red",
+        fg="white",
+    )
+    power = tk.Button(
+        text="Power",
+        width=22,
+        height=3,
+        bg="red",
+        fg="white",
+    )
+    w = tk.Entry(top)
+    title.pack()
+    stream.pack()
+    record.pack(side = tk.LEFT)
+    picture.pack(side = tk.LEFT)
+    battery.pack(side = tk.RIGHT)
+    power.pack(side = tk.RIGHT)
+    w.pack(side = tk.RIGHT)
+    
+    top.mainloop()
+
 def main():
     #while True:
         choice = input('What would you like the submarine to do: ')
@@ -55,4 +108,4 @@ def switch(choice):
         print("The command you selected does not exist. Please try another command.")
         main()
 
-main()
+GUI()

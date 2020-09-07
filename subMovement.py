@@ -93,3 +93,19 @@ class subMovement:
         elif self.speed.upper() == "HIGH":
             print('high speed')
         print('hi 6')
+        
+class Camera:
+    def __init__(self, zoom):
+         self.zoom = zoom
+     
+    #A method to take a photot with the submarine
+    def takePhoto(self):
+        print('photo taken')
+      
+    #a method to zoom in with camera    
+    def zoom(self):
+        print('zoom')
+        
+    #a method to record video
+    def record(self):
+        print('record')
