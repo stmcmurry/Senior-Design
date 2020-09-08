@@ -109,3 +109,11 @@ class Camera:
     #a method to record video
     def record(self):
         print('record')
+     
+    #a method to display battery life   
+    def batteryDisplay(self):
+        print('battery display')
+     
+    #a method to turn the sub off    
+    def power(self):
+        print('power')

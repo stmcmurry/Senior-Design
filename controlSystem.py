@@ -42,6 +42,7 @@ def GUI():
         height=3,
         bg="red",
         fg="white",
+        command = camera.batteryDisplay
     )
     power = tk.Button(
         text="Power",
@@ -49,6 +50,7 @@ def GUI():
         height=3,
         bg="red",
         fg="white",
+        command = camera.power
     )
     w = tk.Entry(top)
     title.pack()
