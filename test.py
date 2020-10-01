@@ -25,7 +25,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 import bluetooth
 
 target_name = "My Phone"
-target_address = "STMIP6S-64"
+target_address = "STMIP6S-64" #changes with device
 
 nearby_devices = bluetooth.discover_devices()
 
