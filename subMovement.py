@@ -2,8 +2,9 @@
 Senior Design submarine methods for submarine movement
 """
 import tkinter
-#import socket
+import socket
 import os
+import serial
 
 """
 Replace functionality of controller with laptop
@@ -15,14 +16,14 @@ image stabilization
 speed
 """
 class subMovement:
-    def __init__(self, battery):
-        #self.s = socket.socket()
-        self.battery = battery
+    def __init__(self):
+        self.s = socket.socket()
+        
     
     #A method to check the battery life of the submarine.
-    def batteryLife(self) :
+    """def batteryLife(self) :
         #battery = system.battery()
-        return "Battery is at " + str(self.battery) + " percent."
+        return "Battery is at " + str(self.battery) + " percent."""
     
     #A method to make the submarine move left
     def moveLeft(self):
@@ -53,7 +54,14 @@ class subMovement:
     def moveDown(self):
         #code here
         print('hi 6')
-        
+
+"""
+take photo
+stop and start recording
+depth maintenance
+image stabilization
+speed
+"""        
 class Camera:
     def __init__(self):
          self.power = True
@@ -64,19 +72,19 @@ class Camera:
      
     #A method to take a photot with the submarine
     def takePhoto(self):
-        print('photo taken')
+        print('Photo taken')
       
     #a method to zoom in with camera    
-    def zoom(self):
-        print('zoom')
+    def maintainDepth(self):
+        print('Maintain depth')
         
     #a method to record video
-    def record(self):
-        print('video recording')
+    def recordVideo(self):
+        print("Recording video")
      
     #a method to display battery life   
-    def batteryDisplay(self):
-        print('battery display')
+    def stabilizeImage(self):
+        print('Stabilize Image')
      
     #a method to turn the sub off    
     def power(self):

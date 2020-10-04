@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
 
-
-"""
 import subMovement
 import os
 import tkinter as tk
-
 
 def main():
     #while True:
@@ -16,45 +12,45 @@ def main():
        
 #switching algorithm to choose command
 def switch(choice):
-    if choice.upper() == "BATTERY LIFE":
+    """if choice.upper() == "BATTERY LIFE":
         sub = subMovement.subMovement(15, "medium")
         print(sub.batteryLife())
-        #main()
-    elif choice.upper() == "MOVE LEFT":
+        #main()"""
+    if choice.upper() == "MOVE LEFT":
         #speed = str(input('How fast would you like the submarine to go (low, medium, high): '))
-        sub = subMovement.subMovement(15)
+        sub = subMovement.subMovement()
         sub.moveLeft()
         #main()
     elif choice.upper() == "MOVE RIGHT":
         #speed = str(input('How fast would you like the submarine to go (low, medium, high): '))
-        sub = subMovement.subMovement(15)
+        sub = subMovement.subMovement()
         sub.moveRight()
         #main()
     elif choice.upper() == "MOVE FORWARD":
         #speed = str(input('How fast would you like the submarine to go (low, medium, high): '))
-        sub = subMovement.subMovement(15)
+        sub = subMovement.subMovement()
         sub.moveForward()
         #main()
     elif choice.upper() == "MOVE BACKWARD":
         #speed = str(input('How fast would you like the submarine to go (low, medium, high): '))
-        sub = subMovement.subMovement(15)
+        sub = subMovement.subMovement()
         sub.moveBackward()
         #main()
     elif choice.upper() == "MOVE UP":
         #speed = str(input('How fast would you like the submarine to go (low, medium, high): '))
-        sub = subMovement.subMovement(15)
+        sub = subMovement.subMovement()
         sub.moveUp()
        # main()
     elif choice.upper() == "MOVE DOWN":
         #speed = str(input('How fast would you like the submarine to go (low, medium, high): '))
-        sub = subMovement.subMovement(15)
+        sub = subMovement.subMovement()
         sub.moveDown()
         #main()
     elif choice.upper() == "EXIT":
         print("Have a nice day.")
     else:
         print("The command you selected does not exist. Please try another command.")
-        #main()
+
 #main is where GUI will be developed
 #def GUI():
 top = tk.Tk()
@@ -73,7 +69,7 @@ record = tk.Button(
     height=3,
     bg="red",
     fg="white",
-    command = camera.record
+    command = camera.recordVideo
 )
 picture = tk.Button(
     text="Take Picture",
@@ -84,20 +80,20 @@ picture = tk.Button(
     command = camera.takePhoto
 )
 battery = tk.Button(
-    text="Battery Display",
+    text="Stabilize Image",
     width=22,
     height=3,
     bg="red",
     fg="white",
-    command = camera.batteryDisplay
+    command = camera.stabilizeImage
 )
 power = tk.Button(
-    text="Power",
+    text="Maintain Depth",
     width=22,
     height=3,
     bg="red",
     fg="white",
-    command = camera.power
+    command = camera.maintainDepth
 )
 entry = tk.Entry(top,
                  bg = "white")
@@ -117,7 +113,6 @@ scale = tk.Scale(
 )
 
 title.pack()
-#stream.pack()
 record.pack(side = tk.TOP)
 picture.pack(side = tk.TOP)
 battery.pack(side = tk.TOP)

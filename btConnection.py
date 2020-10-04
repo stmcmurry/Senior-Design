@@ -1,20 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Oct  4 17:23:43 2020
 
-"""import socket
+@author: stmcm
+"""
 
-HOST = '198.162.0.5'  # Standard loopback interface address (localhost)
-PORT = 65432        # Port to listen on (non-privileged ports are > 1023)
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.bind((HOST, PORT))
-    s.listen()
-    conn, addr = s.accept()
-    with conn:
-        print('Connected by', addr)
-        while True:
-            data = conn.recv(1024)
-            if not data:
-                break
-            conn.sendall(data)"""
 import socket
 import serial
 import pickle
