@@ -2,7 +2,10 @@
 
 import subMovement
 import os
-import tkinter as tk
+try:  # import as appropriate for 2.x vs. 3.x    
+    import tkinter as tk 
+except:    
+    import Tkinter as tk 
 
 def main():
     #while True:
