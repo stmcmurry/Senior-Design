@@ -54,6 +54,18 @@ class subMovement:
     def moveDown(self):
         #code here
         print('hi 6')
+        
+    #a method that changes speed from low, medium and high
+    def speed(self, speed):
+        #low
+        if speed == 1:
+            self.speed = 1
+        #medium
+        elif speed == 2:
+            self.speed = 2
+        #high
+        elif speed == 3:
+            self.speed = 3
 
 """
 take photo
@@ -67,16 +79,12 @@ class Camera:
          self.power = True
          self.record = False
          self.picture = False
-         self.battery = False
-         self.speed = 2
+         self.maintainDepth = False
+         self.stabilieImage = False
      
     #A method to take a photot with the submarine
     def takePhoto(self):
         print('Photo taken')
-      
-    #a method to zoom in with camera    
-    def maintainDepth(self):
-        print('Maintain depth')
         
     #a method to record video
     def recordVideo(self):
@@ -86,18 +94,10 @@ class Camera:
     def stabilizeImage(self):
         print('Stabilize Image')
      
-    #a method to turn the sub off    
+    """#a method to turn the sub off    
     def power(self):
-        print('power')
-        
-    #a method that changes speed from low, medium and high
-    def speed(self, speed):
-        #low
-        if speed == 1:
-            self.speed = 1
-        #medium
-        elif speed == 2:
-            self.speed = 2
-        #high
-        elif speed == 3:
-            self.speed = 3
+        print('power')"""
+    
+    #a method to maintain depth    
+    def depthMaintain(self):
+        print('Maintain depth')

@@ -93,7 +93,7 @@ power = tk.Button(
     height=3,
     bg="red",
     fg="white",
-    command = camera.maintainDepth
+    command = camera.depthMaintain
 )
 entry = tk.Entry(top,
                  bg = "white")

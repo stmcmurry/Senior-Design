@@ -1,7 +1,7 @@
 
-"""import socket
+import socket
 
-HOST = '198.162.0.5'  # Standard loopback interface address (localhost)
+HOST = '198.168.16.105'  # Standard loopback interface address (localhost)
 PORT = 65432        # Port to listen on (non-privileged ports are > 1023)
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -14,23 +14,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             data = conn.recv(1024)
             if not data:
                 break
-            conn.sendall(data)"""
-import socket
-import serial
-import pickle
-import bluetooth
-
-target_name = "My Phone"
-target_address = "STMIP6S-64" #changes with device
-
-nearby_devices = bluetooth.discover_devices()
-
-for bdaddr in nearby_devices:
-    if target_name == bluetooth.lookup_name( bdaddr ):
-        target_address = bdaddr
-        break
-
-if target_address is not None:
-    print("found target bluetooth device with address ",target_address)
-else:
-    print("could not find target bluetooth device nearby")
+            conn.sendall(data)
