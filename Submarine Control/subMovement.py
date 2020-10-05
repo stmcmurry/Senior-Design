@@ -16,9 +16,9 @@ image stabilization
 speed
 """
 class subMovement:
-    def __init__(self):
+    def __init__(self, speed):
         self.s = socket.socket()
-        
+        self.speed = speed
     
     #A method to check the battery life of the submarine.
     """def batteryLife(self) :
@@ -28,44 +28,50 @@ class subMovement:
     #A method to make the submarine move left
     def moveLeft(self):
         #code here
+        self.speedUp()
         print('hi 1')
-    
+
     #A method to make the submarine move right
     def moveRight(self):
         #code here
+        self.speedUp()
         print('hi 2')
     
     #A method to make the submarine move forward
     def moveForward(self):
         #code here
+        self.speedUp()
         print('hi 3')
     
     #A method to make the submarine move backward
     def moveBackward(self):
         #code here
+        self.speedUp()
         print('hi 4')
     
     #A method to make the submarine move up
     def moveUp(self):
         #code here
+        self.speedUp()
         print('hi 5')
     
     #A method to make the submarine move down
     def moveDown(self):
         #code here
+        self.speedUp()
         print('hi 6')
         
     #a method that changes speed from low, medium and high
-    def speed(self, speed):
+    def speedUp(self):
         #low
-        if speed == 1:
-            self.speed = 1
+        if self.speed == 1:
+            print('slow')
         #medium
-        elif speed == 2:
-            self.speed = 2
+        elif self.speed == 2:
+            print('medium')
         #high
-        elif speed == 3:
-            self.speed = 3
+        elif self.speed == 3:
+            print('fast')
 
 """
 take photo
