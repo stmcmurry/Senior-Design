@@ -1,10 +1,10 @@
 """
 Senior Design submarine methods for submarine movement
 """
-import tkinter
 import socket
 import os
 import serial
+import time
 
 """
 Replace functionality of controller with laptop
@@ -16,9 +16,8 @@ image stabilization
 speed
 """
 class subMovement:
-    def __init__(self, speed):
+    def __init__(self):
         self.s = socket.socket()
-        self.speed = speed
     
     #A method to check the battery life of the submarine.
     """def batteryLife(self) :
@@ -28,50 +27,42 @@ class subMovement:
     #A method to make the submarine move left
     def moveLeft(self):
         #code here
-        self.speedUp()
-        print('hi 1')
+        #self.speedUp()
+        print('left')
 
     #A method to make the submarine move right
     def moveRight(self):
         #code here
-        self.speedUp()
-        print('hi 2')
+        #self.speedUp()
+        print('right')
     
     #A method to make the submarine move forward
     def moveForward(self):
         #code here
-        self.speedUp()
-        print('hi 3')
+        #self.speedUp()
+        print('forward')
     
     #A method to make the submarine move backward
     def moveBackward(self):
         #code here
-        self.speedUp()
-        print('hi 4')
+        #self.speedUp()
+        print('backward')
     
     #A method to make the submarine move up
     def moveUp(self):
         #code here
-        self.speedUp()
-        print('hi 5')
+        #self.speedUp()
+        print('up')
     
     #A method to make the submarine move down
     def moveDown(self):
         #code here
-        self.speedUp()
-        print('hi 6')
+        #self.speedUp()
+        print('down')
         
     #a method that changes speed from low, medium and high
     def speedUp(self):
-        #low
-        if self.speed == 1:
-            print('slow')
-        #medium
-        elif self.speed == 2:
-            print('medium')
-        #high
-        elif self.speed == 3:
-            print('fast')
+        print('speed')
 
 """
 take photo
