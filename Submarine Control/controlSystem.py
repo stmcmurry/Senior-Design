@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import subMovement
-import os
 try:  # import as appropriate for 2.x vs. 3.x    
     import tkinter as tk 
 except:    
@@ -18,6 +17,11 @@ def main():
     switch(answer)"""
        
 #switching algorithm to choose command
+"""def switcher(choice):
+    sub = subMovement.subMovement()
+    choice.upper() = {
+        "LEFT":  sub.moveLeft(),
+        }"""
 def switch(choice):
     """if choice.upper() == "BATTERY LIFE":
         sub = subMovement.subMovement(15, "medium")
@@ -60,16 +64,22 @@ def switch(choice):
         sub.recordVideo()
     elif choice.upper() == "PICTURE":
         sub = subMovement.Camera()
-        sub.takePicture()
+        sub.takePhoto()
     elif choice.upper() == "STABLE":
         sub = subMovement.Camera()
-        sub.stabilizeImage
+        sub.stabilizeImage()
     elif choice.upper() == "DEPTH":
         sub = subMovement.Camera()
         sub.depthMaintain()
     elif choice.upper() == "SPEED":
         sub = subMovement.subMovement()
         sub.speedUp()
+    elif choice.upper() == "LOCK":
+        sub = subMovement.Camera()
+        sub.lock()
+    elif choice.upper() == "UNLOCK":
+        sub = subMovement.Camera()
+        sub.unlock()
     else:
         print("The command you selected does not exist. Please try another command.")
 
