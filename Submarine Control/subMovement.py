@@ -135,3 +135,8 @@ class Camera:
     def depthMaintain(self):
         pyautogui.click(686, 872)
         print('Maintain depth')
+    
+    #a method to control the lights
+    def lights(self):
+        #code here
+        print("lights")

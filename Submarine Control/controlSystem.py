@@ -6,27 +6,19 @@ try:  # import as appropriate for 2.x vs. 3.x
 except:    
     import Tkinter as tk 
 
-def main():
+def onclick(event=None):
+    print("You clicked the button")
+    answer = entry.get()
+    switch(answer)
+    #main()
+
+
+"""def main():
     #while True:
         answer = entry.get()
-        switch(answer)
-        #choice = input('What would you like the submarine to do: ')
+        switch(answer)"""
         
-"""def getSpeed(answer):
-    #speed = scale.get()
-    switch(answer)"""
-       
-#switching algorithm to choose command
-"""def switcher(choice):
-    sub = subMovement.subMovement()
-    choice.upper() = {
-        "LEFT":  sub.moveLeft(),
-        }"""
 def switch(choice):
-    """if choice.upper() == "BATTERY LIFE":
-        sub = subMovement.subMovement(15, "medium")
-        print(sub.batteryLife())
-        #main()"""
     if choice.upper() == "LEFT":
         #speed = str(input('How fast would you like the submarine to go (low, medium, high): '))
         sub = subMovement.subMovement()
@@ -88,56 +80,18 @@ def switch(choice):
 top = tk.Tk()
 camera = subMovement.Camera()
 
+top.bind('<Return>', onclick)
+
 bwidth = 22
 bheight = 3
-cameraIcon = tk.PhotoImage(file = r"C:\Users\stmcm\OneDrive\Documents\Senior Design\Python Scripts\images\camera-512.png")
-depthIcon = tk.PhotoImage(file = r"C:\Users\stmcm\OneDrive\Documents\Senior Design\Python Scripts\images\depth.png")
+#cameraIcon = tk.PhotoImage(file = r"C:\Users\stmcm\OneDrive\Documents\Senior Design\Python Scripts\images\camera-512.png")
+#depthIcon = tk.PhotoImage(file = r"C:\Users\stmcm\OneDrive\Documents\Senior Design\Python Scripts\images\depth.png")
 #recordIcon
 #stabilizeIcon
 #depthIcon
 
 title = tk.Label(text = "Submarine Control System")
-"""
-record = tk.Button(
-    text="Record Video",
-    width=bwidth,
-    height=bheight,
-    bg="gray",
-    fg="white",
-    command = camera.recordVideo
-)
 
-picture = tk.Button(
-    text="Take Picture",
-    width=bwidth,
-    height=bheight,
-    bg="gray",
-    fg="white",
-    #image = cameraIcon,
-    #compound = tk.TOP,
-    command = camera.takePhoto
-)
-
-imageStable = tk.Button(
-    text="Stabilize Image",
-    width=bwidth,
-    height=bheight,
-    bg="gray",
-    fg="white",
-    command = camera.stabilizeImage
-)
-
-maintainDepth = tk.Button(
-    text="Maintain Depth",
-    width=bwidth,
-    height=bheight,
-    bg="gray",
-    fg="white",
-    #image = depthIcon,
-    #compound = tk.TOP,
-    command = camera.depthMaintain
-)
-"""
 entry = tk.Entry(top,
                  bg = "white")
 
@@ -147,21 +101,9 @@ submit = tk.Button(
     height = 2,
     bg = "black",
     fg = "white",
-    command = main
+    command = onclick
 )
-"""
-scale = tk.Scale(
-    label = 'speed',
-    from_ = 3,
-    to_ = 1,
-    orient = tk.VERTICAL
-)
-"""
 title.pack()
-"""record.pack(side = tk.TOP)
-picture.pack(side = tk.TOP)
-imageStable.pack(side = tk.TOP)
-maintainDepth.pack(side = tk.TOP)"""
 submit.pack(side = tk.BOTTOM)
 entry.pack(side = tk.BOTTOM)
 #scale.pack(side = tk.RIGHT)
