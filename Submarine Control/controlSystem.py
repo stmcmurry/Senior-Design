@@ -48,9 +48,6 @@ def switch(choice):
         #speed = str(input('How fast would you like the submarine to go (low, medium, high): '))
         sub = subMovement.subMovement()
         sub.moveDown()
-        #main()
-    #elif choice.upper() == "EXIT":
-     #   print("Have a nice day.")
     elif choice.upper() == "RECORD":
         sub = subMovement.Camera()
         sub.recordVideo()
@@ -63,15 +60,30 @@ def switch(choice):
     elif choice.upper() == "DEPTH":
         sub = subMovement.Camera()
         sub.depthMaintain()
-    elif choice.upper() == "SPEED":
+    elif choice.upper() == "LOW":
         sub = subMovement.subMovement()
-        sub.speedUp()
+        sub.speedUp(choice)
+    elif choice.upper() == "MEDIUM":
+        sub = subMovement.subMovement()
+        sub.speedUp(choice)
+    elif choice.upper() == "HIGH":
+        sub = subMovement.subMovement()
+        sub.speedUp(choice)
     elif choice.upper() == "LOCK":
         sub = subMovement.Camera()
         sub.lock()
     elif choice.upper() == "UNLOCK":
         sub = subMovement.Camera()
         sub.unlock()
+    elif choice.upper() == "DIM":
+        sub = subMovement.Camera()
+        sub.lights(choice)
+    elif choice.upper() == "MID":
+        sub = subMovement.Camera()
+        sub.lights(choice)
+    elif choice.upper() == "BRIGHT":
+        sub = subMovement.Camera()
+        sub.lights(choice)
     else:
         print("The command you selected does not exist. Please try another command.")
 

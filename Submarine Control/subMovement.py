@@ -88,7 +88,27 @@ class subMovement:
         print('down')
         
     #a method that changes speed from low, medium and high
-    def speedUp(self):
+    def speedUp(self, speed):
+        #speed = 1231, 875
+        #low = 1227, 986
+        #med = 1227, 832
+        #high = 1220, 738
+        pyautogui.click(1231, 875)
+        if(speed.upper() == "LOW"):
+            mouse = Controller()
+            mouse.press(Button.left)
+            pyautogui.dragTo(1227, 986, duration=0.3)
+            mouse.release(Button.left)
+        elif(speed.upper() == "MEDIUM"):
+            mouse = Controller()
+            mouse.press(Button.left)
+            pyautogui.dragTo(1227, 832, duration=0.3)
+            mouse.release(Button.left)
+        elif(speed.upper() == "HIGH"):
+            mouse = Controller()
+            mouse.press(Button.left)
+            pyautogui.dragTo(1227, 738, duration=0.3)
+            mouse.release(Button.left)
         print('speed')
 
 """
@@ -129,7 +149,7 @@ class Camera:
         pyautogui.moveTo(687,533, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
-        pyautogui.dragTo(1151, 533, duration=0.5)
+        pyautogui.dragTo(1200, 533, duration=0.5)
         mouse.release(Button.left)
     #a method to maintain depth    
     def depthMaintain(self):
@@ -137,6 +157,14 @@ class Camera:
         print('Maintain depth')
     
     #a method to control the lights
-    def lights(self):
+    def lights(self, lights):
         #code here
+        pyautogui.click(564, 877)
+        time.sleep(0.3)
+        if(lights.upper() == "DIM"):
+            pyautogui.click(560,920)
+        elif(lights.upper() == "MID"):
+            pyautogui.click(560,813)
+        elif(lights.upper() == "BRIGHT"):
+            pyautogui.click(558,708)
         print("lights")
