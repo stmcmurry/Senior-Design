@@ -1,2 +1,5 @@
 # Senior-Design
 Repository for senior design project.
+This is the control system for the Youcan submarine that is controlled with an Android phone and two programs that handle mouse and keyboard inputs.
+The two files needed are in the control system file called controlSystem.py and subMovement.py.
+The .zip file in the main directory will aslo need to be downloaded in order to connect the the Android phone.
