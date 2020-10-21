@@ -40,7 +40,6 @@ class subMovement:
     
     #A method to make the submarine move forward
     def moveForward(self):
-        #code here
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
@@ -51,7 +50,6 @@ class subMovement:
     
     #A method to make the submarine move backward
     def moveBackward(self):
-        #code here
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
@@ -62,7 +60,6 @@ class subMovement:
     
     #A method to make the submarine move up
     def moveUp(self):
-        #code here
         pyautogui.moveTo(1491,775, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
@@ -73,7 +70,6 @@ class subMovement:
     
     #A method to make the submarine move down
     def moveDown(self):
-        #code here
         pyautogui.moveTo(1491,775, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
@@ -147,7 +143,6 @@ class Camera:
     
     #a method to control the lights from dim, mid and bright
     def lights(self, lights):
-        #code here
         pyautogui.click(564, 877)
         time.sleep(0.3)
         if(lights.upper() == "DIM"):
@@ -157,7 +152,8 @@ class Camera:
         elif(lights.upper() == "BRIGHT"):
             pyautogui.click(558,708)
         backToGUI()
-            
+        
+#a method to return the window to the GUI            
 def backToGUI():
     pyautogui.keyDown('alt')
     time.sleep(0.1)
