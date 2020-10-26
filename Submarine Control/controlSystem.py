@@ -10,8 +10,15 @@ from tkinter import ttk
 #a method to use the Submit button with the 'enter' key
 def onclick(event=None):
     answer = entry.get()
-    switch(answer)
-     
+    switch(answer, 5)
+    #splitString(answer)
+    
+
+"""def splitString(answer):
+    answer.split( )
+    print(answer[0], " and ", answer[1])
+    switch(answer[0], answer[1])    """ 
+    
 #a method to display a popup windo if the user inputs an unrecognized command    
 def popupmsg(msg):
     popup = tk.Tk()
@@ -23,36 +30,36 @@ def popupmsg(msg):
     popup.mainloop()
 
 #a switching method that contains the keywords to control the submarine      
-def switch(choice):
+def switch(choice, time):
     if choice.upper() == "LEFT":
         sub = subMovement.subMovement()
-        sub.moveLeft()
+        sub.moveLeft(time)
     
     elif choice.upper() == "RIGHT":
         sub = subMovement.subMovement()
-        sub.moveRight()
+        sub.moveRight(time)
         
     elif choice.upper() == "FORWARD":
         sub = subMovement.subMovement()
-        sub.moveForward()
+        sub.moveForward(time)
         
-    elif choice.upper() == "BACKWARD":
+    elif choice.upper() == "BACK":
         sub = subMovement.subMovement()
-        sub.moveBackward()
+        sub.moveBackward(time)
         
     elif choice.upper() == "UP":
         sub = subMovement.subMovement()
-        sub.moveUp()
+        sub.moveUp(time)
        
     elif choice.upper() == "DOWN":
         sub = subMovement.subMovement()
-        sub.moveDown()
+        sub.moveDown(time)
         
     elif choice.upper() == "RECORD":
         sub = subMovement.Camera()
         sub.recordVideo()
         
-    elif choice.upper() == "PICTURE":
+    elif choice.upper() == "PICTURE" or "PHOTO":
         sub = subMovement.Camera()
         sub.takePhoto()
         

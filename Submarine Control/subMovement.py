@@ -19,7 +19,7 @@ class subMovement:
         self.speed = "MEDIUM"
     
     #A method to make the submarine move left
-    def moveLeft(self):
+    def moveLeft(self, duration):
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
@@ -29,7 +29,7 @@ class subMovement:
         backToGUI()
 
     #A method to make the submarine move right
-    def moveRight(self):
+    def moveRight(self, duration):
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
@@ -39,7 +39,7 @@ class subMovement:
         backToGUI()
     
     #A method to make the submarine move forward
-    def moveForward(self):
+    def moveForward(self, duration):
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
@@ -49,7 +49,7 @@ class subMovement:
         backToGUI()
     
     #A method to make the submarine move backward
-    def moveBackward(self):
+    def moveBackward(self, duration):
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
@@ -59,7 +59,7 @@ class subMovement:
         backToGUI()
     
     #A method to make the submarine move up
-    def moveUp(self):
+    def moveUp(self, duration):
         pyautogui.moveTo(1491,775, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
@@ -69,7 +69,7 @@ class subMovement:
         backToGUI()
     
     #A method to make the submarine move down
-    def moveDown(self):
+    def moveDown(self, duration):
         pyautogui.moveTo(1491,775, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
