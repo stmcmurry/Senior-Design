@@ -67,32 +67,32 @@ def blockCommand(answer):
 def switch(choice, time):
     if choice.upper() == "LEFT":
         sub = subMovement.subMovement()
-        int(time)
+        time = int(time)
         sub.moveLeft(time)
     
     elif choice.upper() == "RIGHT":
         sub = subMovement.subMovement()
-        int(time)
+        time = int(time)
         sub.moveRight(time)
         
     elif choice.upper() == "FORWARD":
         sub = subMovement.subMovement()
-        int(time)
+        time = int(time)
         sub.moveForward(time)
         
     elif choice.upper() == "BACK":
         sub = subMovement.subMovement()
-        int(time)
+        time = int(time)
         sub.moveBackward(time)
         
     elif choice.upper() == "UP":
         sub = subMovement.subMovement()
-        int(time)
+        time = int(time)
         sub.moveUp(time)
        
     elif choice.upper() == "DOWN":
         sub = subMovement.subMovement()
-        int(time)
+        time = int(time)
         sub.moveDown(time)
         
     elif choice.upper() == "RECORD":
