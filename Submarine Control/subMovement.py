@@ -24,7 +24,7 @@ class subMovement:
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(221, 700, duration=1.5)
-        time.sleep(2)
+        time.sleep(duration)
         mouse.release(Button.left)
         backToGUI()
 
@@ -34,7 +34,7 @@ class subMovement:
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(481, 700, duration=1.5)
-        time.sleep(2)
+        time.sleep(duration)
         mouse.release(Button.left)
         backToGUI()
     
@@ -44,7 +44,7 @@ class subMovement:
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(344, 580, duration=1.5)
-        time.sleep(2)
+        time.sleep(duration)
         mouse.release(Button.left)
         backToGUI()
     
@@ -54,7 +54,7 @@ class subMovement:
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(344, 850, duration=1.5)
-        time.sleep(2)
+        time.sleep(duration)
         mouse.release(Button.left)
         backToGUI()
     
@@ -64,7 +64,7 @@ class subMovement:
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(1491, 750, duration=1.5)
-        time.sleep(2)
+        time.sleep(duration)
         mouse.release(Button.left)
         backToGUI()
     
@@ -74,7 +74,7 @@ class subMovement:
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(1491, 825, duration=1.5)
-        time.sleep(2)
+        time.sleep(duration)
         mouse.release(Button.left)
         backToGUI()
         

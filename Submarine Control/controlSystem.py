@@ -10,14 +10,18 @@ from tkinter import ttk
 #a method to use the Submit button with the 'enter' key
 def onclick(event=None):
     answer = entry.get()
-    switch(answer, 5)
-    #splitString(answer)
+    if answer.upper() == "BLOCK":
+        blockCommand(answer)
+    splitString(answer)
     
-
-"""def splitString(answer):
-    answer.split( )
-    print(answer[0], " and ", answer[1])
-    switch(answer[0], answer[1])    """ 
+#a method to get a value for how long the sub moves
+def splitString(answer):
+    msg = [0]*2
+    print(msg)
+    msg = answer.split(' ')
+    msg.append('0')
+    print(msg)
+    switch(msg[0], msg[1])    
     
 #a method to display a popup windo if the user inputs an unrecognized command    
 def popupmsg(msg):
@@ -28,6 +32,10 @@ def popupmsg(msg):
     B1 = ttk.Button(popup, text="Okay", command = popup.destroy)
     B1.pack()
     popup.mainloop()
+
+def blockCommand(answer):
+    block = []
+    block.append(answer)
 
 #a switching method that contains the keywords to control the submarine      
 def switch(choice, time):
