@@ -34,6 +34,7 @@ def popupmsg(msg):
     B1.pack()
     popup.mainloop()
 
+#a method to take in multpile instructions
 def blockCommand(answer):
     block = answer.split(' ')
     
@@ -46,53 +47,52 @@ def blockCommand(answer):
             continue
         else:
             block.insert(j+1, "0")
-            
-    if len(block) % 2 == 0:
-        for k in range(len(block)):
-            if k % 2 == 1:
-                switch(block[k-1], block[k])
-            else:
-                continue
-            
-    elif len(block) % 2 != 0:
+    block.append("0")      
+    """if len(block) % 2 != 0:
         block.append("0")
         for k in range(len(block)):
             if k % 2 == 1:
                 switch(block[k-1], block[k])
             else:
                 continue
+            """
     print(block)
+    #if len(block) % 2 == 0:
+    for k in range(len(block)):
+        if (block[k].isnumeric() == False) and (block[k+1].isnumeric() == True):
+            switch(block[k], block[k+1])
+            print(block[k], block[k+1])
     
 #a switching method that contains the keywords to control the submarine      
 def switch(choice, time):
     if choice.upper() == "LEFT":
         sub = subMovement.subMovement()
-        time = int(time)
+        time = float(time)
         sub.moveLeft(time)
     
     elif choice.upper() == "RIGHT":
         sub = subMovement.subMovement()
-        time = int(time)
+        time = float(time)
         sub.moveRight(time)
-        
-    elif choice.upper() == "FORWARD":
-        sub = subMovement.subMovement()
-        time = int(time)
-        sub.moveForward(time)
         
     elif choice.upper() == "BACK":
         sub = subMovement.subMovement()
-        time = int(time)
+        time = float(time)
         sub.moveBackward(time)
+        
+    elif choice.upper() == "FORWARD":
+        sub = subMovement.subMovement()
+        time = float(time)
+        sub.moveForward(time)
         
     elif choice.upper() == "UP":
         sub = subMovement.subMovement()
-        time = int(time)
+        time = float(time)
         sub.moveUp(time)
        
     elif choice.upper() == "DOWN":
         sub = subMovement.subMovement()
-        time = int(time)
+        time = float(time)
         sub.moveDown(time)
         
     elif choice.upper() == "RECORD":

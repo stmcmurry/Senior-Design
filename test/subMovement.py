@@ -19,62 +19,62 @@ class subMovement:
         self.speed = "MEDIUM"
     
     #A method to make the submarine move left
-    def moveLeft(self, duration):
+    def moveLeft(self, hold):
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(221, 700, duration=1.5)
-        time.sleep(duration)
+        time.sleep(hold)
         mouse.release(Button.left)
         backToGUI()
 
     #A method to make the submarine move right
-    def moveRight(self, duration):
+    def moveRight(self, hold):
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(481, 700, duration=1.5)
-        time.sleep(duration)
+        time.sleep(hold)
         mouse.release(Button.left)
         backToGUI()
     
     #A method to make the submarine move forward
-    def moveForward(self, duration):
+    def moveForward(self, hold):
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(344, 580, duration=1.5)
-        time.sleep(duration)
+        time.sleep(hold)
         mouse.release(Button.left)
         backToGUI()
     
     #A method to make the submarine move backward
-    def moveBackward(self, duration):
+    def moveBackward(self, hold):
         pyautogui.moveTo(344,700, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
-        pyautogui.dragTo(344, 850, duration=1.5)
-        time.sleep(duration)
+        pyautogui.dragTo(344, 849, duration=1.5)
+        time.sleep(hold)
         mouse.release(Button.left)
         backToGUI()
     
     #A method to make the submarine move up
-    def moveUp(self, duration):
+    def moveUp(self, hold):
         pyautogui.moveTo(1491,775, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(1491, 750, duration=1.5)
-        time.sleep(duration)
+        time.sleep(hold)
         mouse.release(Button.left)
         backToGUI()
     
     #A method to make the submarine move down
-    def moveDown(self, duration):
+    def moveDown(self, hold):
         pyautogui.moveTo(1491,775, duration = 0)
         mouse = Controller()
         mouse.press(Button.left)
         pyautogui.dragTo(1491, 825, duration=1.5)
-        time.sleep(duration)
+        time.sleep(hold)
         mouse.release(Button.left)
         backToGUI()
         
