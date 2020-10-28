@@ -110,7 +110,7 @@ def switch(choice, time):
         sub = subMovement.Camera()
         sub.recordVideo()
         
-    elif choice.upper() == "PICTURE" or "PHOTO":
+    elif choice.upper() == "PHOTO":
         sub = subMovement.Camera()
         sub.takePhoto()
         
