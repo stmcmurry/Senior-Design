@@ -26,7 +26,7 @@ class subMovement:
         pyautogui.dragTo(221, 700, duration=1.5)
         time.sleep(hold)
         mouse.release(Button.left)
-        backToGUI()
+        #backToGUI()
 
     #A method to make the submarine move right
     def moveRight(self, hold):
@@ -36,7 +36,7 @@ class subMovement:
         pyautogui.dragTo(481, 700, duration=1.5)
         time.sleep(hold)
         mouse.release(Button.left)
-        backToGUI()
+        #backToGUI()
     
     #A method to make the submarine move forward
     def moveForward(self, hold):
@@ -46,7 +46,7 @@ class subMovement:
         pyautogui.dragTo(344, 580, duration=1.5)
         time.sleep(hold)
         mouse.release(Button.left)
-        backToGUI()
+        #backToGUI()
     
     #A method to make the submarine move backward
     def moveBackward(self, hold):
@@ -56,7 +56,7 @@ class subMovement:
         pyautogui.dragTo(344, 849, duration=1.5)
         time.sleep(hold)
         mouse.release(Button.left)
-        backToGUI()
+        #backToGUI()
     
     #A method to make the submarine move up
     def moveUp(self, hold):
@@ -66,7 +66,7 @@ class subMovement:
         pyautogui.dragTo(1491, 750, duration=1.5)
         time.sleep(hold)
         mouse.release(Button.left)
-        backToGUI()
+        #backToGUI()
     
     #A method to make the submarine move down
     def moveDown(self, hold):
@@ -76,7 +76,7 @@ class subMovement:
         pyautogui.dragTo(1491, 825, duration=1.5)
         time.sleep(hold)
         mouse.release(Button.left)
-        backToGUI()
+        #backToGUI()
         
     #a method that changes speed from low, medium and high
     def speedUp(self, speed):
@@ -97,7 +97,7 @@ class subMovement:
             pyautogui.dragTo(1227, 738, duration=0.3)
             mouse.release(Button.left)
         self.speed = speed
-        backToGUI()
+        #backToGUI()
 
 #A class that controls camera functionalit and lights  
 class Camera:
@@ -111,22 +111,22 @@ class Camera:
     #A method to take a photot with the submarine
     def takePhoto(self):
         pyautogui.click(1696, 387)
-        backToGUI()
+        #backToGUI()
         
     #a method to record video
     def recordVideo(self):
         pyautogui.click(1695, 460)
-        backToGUI()
+        #backToGUI()
      
     #a method to display battery life   
     def stabilizeImage(self):
         pyautogui.click(1694, 666)
-        backToGUI()
+        #backToGUI()
      
     #a method to lock the submarine's controls   
     def lock(self):
         pyautogui.click(1638, 114)
-        backToGUI()
+        #backToGUI()
     #a method to unlock the submarine's controls    
     def unlock(self):
         pyautogui.moveTo(687,533, duration = 0)
@@ -134,12 +134,12 @@ class Camera:
         mouse.press(Button.left)
         pyautogui.dragTo(1200, 533, duration=0.5)
         mouse.release(Button.left)
-        backToGUI()
+        #backToGUI()
     
     #a method to maintain depth    
     def depthMaintain(self):
         pyautogui.click(686, 872)
-        backToGUI()
+        #backToGUI()
     
     #a method to control the lights from dim, mid and bright
     def lights(self, lights):
@@ -151,12 +151,6 @@ class Camera:
             pyautogui.click(560,813)
         elif(lights.upper() == "BRIGHT"):
             pyautogui.click(558,708)
-        backToGUI()
+        #backToGUI()
         
-#a method to return the window to the GUI            
-def backToGUI():
-    pyautogui.keyDown('alt')
-    time.sleep(0.1)
-    pyautogui.press('tab')
-    time.sleep(0.1)
-    pyautogui.keyUp('alt')
+          

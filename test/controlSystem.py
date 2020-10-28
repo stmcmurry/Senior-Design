@@ -6,6 +6,8 @@ The file is meant to work in tandem with scrcpy
 import subMovement
 import tkinter as tk
 from tkinter import ttk
+import time as t
+import pyautogui
 
 #a method to use the Submit button with the 'enter' key
 def onclick(event=None):
@@ -22,7 +24,8 @@ def splitString(answer):
         msg = answer.split(' ')
         msg.append('0')
         print(msg)
-        switch(msg[0], msg[1])    
+        switch(msg[0], msg[1]) 
+        backToGUI()
     
 #a method to display a popup window if the user inputs an unrecognized command    
 def popupmsg(msg):
@@ -33,6 +36,14 @@ def popupmsg(msg):
     B1 = ttk.Button(popup, text="Okay", command = popup.destroy)
     B1.pack()
     popup.mainloop()
+ 
+#a method to return the window to the GUI      
+def backToGUI():
+    pyautogui.keyDown('alt')
+    t.sleep(0.1)
+    pyautogui.press('tab')
+    t.sleep(0.1)
+    pyautogui.keyUp('alt')
 
 #a method to take in multpile instructions
 def blockCommand(answer):
@@ -41,30 +52,30 @@ def blockCommand(answer):
     for i in range(len(block)):
         if ',' in block[i]:
             block[i] = block[i].replace(",", "")
-            
+    
+    print(block)       
     for j in range(len(block)):
-        if block[j].isnumeric() or block[j+1].isnumeric():
-            continue
-        else:
-            block.insert(j+1, "0")
-    block.append("0")      
-    """if len(block) % 2 != 0:
-        block.append("0")
-        for k in range(len(block)):
-            if k % 2 == 1:
-                switch(block[k-1], block[k])
-            else:
+        try:
+            if block[j].isnumeric() or block[j+1].isnumeric():
                 continue
-            """
+            else:
+                block.insert(j+1, "0")
+        except:
+            block.append("0")
+    
+    block.append("0")      
+
     print(block)
-    #if len(block) % 2 == 0:
     for k in range(len(block)):
         if (block[k].isnumeric() == False) and (block[k+1].isnumeric() == True):
             switch(block[k], block[k+1])
             print(block[k], block[k+1])
+
+    backToGUI()
     
 #a switching method that contains the keywords to control the submarine      
 def switch(choice, time):
+    print("yay")
     if choice.upper() == "LEFT":
         sub = subMovement.subMovement()
         time = float(time)
