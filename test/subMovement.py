@@ -127,6 +127,7 @@ class Camera:
     def lock(self):
         pyautogui.click(1638, 114)
         #backToGUI()
+        
     #a method to unlock the submarine's controls    
     def unlock(self):
         pyautogui.moveTo(687,533, duration = 0)
@@ -153,4 +154,3 @@ class Camera:
             pyautogui.click(558,708)
         #backToGUI()
         
-          

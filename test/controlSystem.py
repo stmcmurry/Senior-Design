@@ -91,7 +91,7 @@ def switch(choice, time):
         time = float(time)
         sub.moveBackward(time)
         
-    elif choice.upper() == "FORWARD":
+    elif choice.upper() == "FORWARD" or choice.upper() == "STRAIGHT":
         sub = subMovement.subMovement()
         time = float(time)
         sub.moveForward(time)
@@ -110,7 +110,7 @@ def switch(choice, time):
         sub = subMovement.Camera()
         sub.recordVideo()
         
-    elif choice.upper() == "PHOTO":
+    elif choice.upper() == "PHOTO" or choice.upper() == "PICTURE":
         sub = subMovement.Camera()
         sub.takePhoto()
         
@@ -170,6 +170,7 @@ title = tk.Label(text = "Submarine Control System")
 #entry widget to input command words
 entry = tk.Entry(top,
                  bg = "white")
+
 #button for submitting a command
 submit = tk.Button(
     text = "Submit",
