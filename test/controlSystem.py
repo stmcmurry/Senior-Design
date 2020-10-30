@@ -151,7 +151,7 @@ def switch(choice, time):
         sub.lights(choice)
         
     else:
-        popupmsg("The command you selected does not exist. Please try another command.")
+        popupmsg("The '"+ choice + "' command you selected does not exist. Please try another command.")
         
 top = tk.Tk()
 camera = subMovement.Camera()
