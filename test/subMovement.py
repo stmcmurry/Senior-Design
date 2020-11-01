@@ -1,5 +1,6 @@
 """
 Senior Design submarine methods for submarine movement and control
+subMovement.py
 """
 import pyautogui
 import time
@@ -14,6 +15,13 @@ Also use the following commands in the Anaconda command terminal:
 """
 
 #This class controls the basic submarine movements and speed
+#GUI coordinates are cartesian (x,y) pixel coordinates
+#Reminder that all coordinates are currently based off of the screen size of a Samsung S5
+#Standard screen size resolution used
+
+#the automatic mouse clicker will move to certain coordinates with the alloted duration
+#the longer the duration, the longer it'll take for the mouse to move to the next coordinate
+#shorter the duration, shorter it'll take for the mouse to move to the next coordinate
 class subMovement:
     def __init__(self):
         self.speed = "MEDIUM"
@@ -21,11 +29,11 @@ class subMovement:
     #A method to make the submarine move left
     def moveLeft(self, hold):
         pyautogui.moveTo(344,700, duration = 0)
-        mouse = Controller()
-        pyautogui.mouseDown()
-        pyautogui.moveTo(221, 700)
-        time.sleep(hold)
-        mouse.release(Button.left)
+        mouse = Controller() #instantiate mouse to be a controller
+        pyautogui.mouseDown() #mouse clicks and drags
+        pyautogui.moveTo(221, 700) #moves to this poisiion in the GUI
+        time.sleep(hold) #holds the mouse for the alloted time
+        mouse.release(Button.left) #release the mouse
 
     #A method to make the submarine move right
     def moveRight(self, hold):
@@ -92,7 +100,7 @@ class subMovement:
             mouse.release(Button.left)
         self.speed = speed
 
-#A class that controls camera functionalit and lights  
+#A class that controls camera functionaliy and lights  
 class Camera:
     def __init__(self):
          self.power = True
@@ -101,7 +109,7 @@ class Camera:
          self.maintainDepth = False
          self.stableImage = False
      
-    #A method to take a photot with the submarine
+    #A method to take a photo with the submarine
     def takePhoto(self):
         pyautogui.click(1696, 387)
         
